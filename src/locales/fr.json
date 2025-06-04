@@ -14,7 +14,8 @@
   "Index": {
     "meta_title": "BuzzyLan",
     "meta_description": "La solution pour vos jeux entre amis avec des buzzers.",
-    "sponsors_title": "Partenaires"
+    "sponsors_title": "Partenaires",
+    "get_started_button": "Commencer"
   },
   "Counter": {
     "meta_title": "Compteur",

@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link } from '@/libs/i18nNavigation';
 
 type IIndexProps = {
   params: Promise<{ locale: string }>;
@@ -51,7 +52,14 @@ export default async function Index(props: IIndexProps) {
           🚨
         </span>
       </p>
-
+      <div className="mt-6 text-center">
+        <Link
+          href="/sign-in"
+          className="inline-block rounded bg-blue-600 px-6 py-3 text-lg font-semibold text-white shadow-md hover:bg-blue-700 transition-colors"
+        >
+          {t('get_started_button')}
+        </Link>
+      </div>
     </>
   );
 };
