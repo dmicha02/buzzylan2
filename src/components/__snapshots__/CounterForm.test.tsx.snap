@@ -1,0 +1,43 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CounterForm component > renders and matches snapshot 1`] = `
+<div>
+  <form
+    class="form-control w-full max-w-xs"
+  >
+    <p>
+      Current count:
+    </p>
+    <div
+      class="mt-4"
+    >
+      <label
+        class="label"
+        for="increment"
+      >
+        <span
+          class="label-text"
+        >
+          Increment by:
+        </span>
+      </label>
+      <input
+        class="input input-bordered w-full max-w-xs"
+        id="increment"
+        name="increment"
+        type="number"
+      />
+    </div>
+    <div
+      class="mt-6"
+    >
+      <button
+        class="btn btn-primary"
+        type="submit"
+      >
+        Increment
+      </button>
+    </div>
+  </form>
+</div>
+`;

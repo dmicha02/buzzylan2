@@ -7,24 +7,29 @@ export const Hello = async () => {
   const user = await currentUser();
 
   return (
-    <>
-      <p>
-        {`👋 `}
-        {t('hello_message', { email: user?.primaryEmailAddress?.emailAddress ?? '' })}
-      </p>
-      <p>
-        {t.rich('alternative_message', {
-          url: () => (
-            <a
-              className="text-blue-700 hover:border-b-2 hover:border-blue-700"
-              href="https://nextjs-boilerplate.com/pro-saas-starter-kit"
-            >
-              Next.js Boilerplate SaaS
-            </a>
-          ),
-        })}
-      </p>
-      <Sponsors />
-    </>
+    <div className="card bg-base-100 shadow-xl">
+      <div className="card-body">
+        <h2 className="card-title">Welcome!</h2>
+        <p>
+          {`👋 `}
+          {t('hello_message', { email: user?.primaryEmailAddress?.emailAddress ?? '' })}
+        </p>
+        <p>
+          {t.rich('alternative_message', {
+            url: () => (
+              <a
+                className="btn btn-primary"
+                href="https://nextjs-boilerplate.com/pro-saas-starter-kit"
+              >
+                Next.js Boilerplate SaaS
+              </a>
+            ),
+          })}
+        </p>
+        <div className="card-actions justify-end">
+          <Sponsors />
+        </div>
+      </div>
+    </div>
   );
 };

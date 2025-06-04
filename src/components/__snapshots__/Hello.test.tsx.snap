@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Hello component > renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="card bg-base-100 shadow-xl"
+  >
+    <div
+      class="card-body"
+    >
+      <h2
+        class="card-title"
+      >
+        Welcome!
+      </h2>
+      <p>
+        👋
+        Hello, test@example.com!
+      </p>
+      <p>
+        Check out our
+        <a
+          class="btn btn-primary"
+          href="https://nextjs-boilerplate.com/pro-saas-starter-kit"
+        >
+          Next.js Boilerplate SaaS
+        </a>
+        .
+      </p>
+      <div
+        class="card-actions justify-end"
+      >
+        <div>
+          Sponsors Mock
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

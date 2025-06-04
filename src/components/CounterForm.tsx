@@ -30,27 +30,31 @@ export const CounterForm = () => {
   });
 
   return (
-    <form onSubmit={handleIncrement}>
+    <form onSubmit={handleIncrement} className="form-control w-full max-w-xs">
       <p>{t('presentation')}</p>
-      <div>
-        <label className="text-sm font-bold text-gray-700" htmlFor="increment">
-          {t('label_increment')}
-          <input
-            id="increment"
-            type="number"
-            className="ml-2 w-32 appearance-none rounded-sm border border-gray-200 px-2 py-1 text-sm leading-tight text-gray-700 focus:outline-hidden focus:ring-3 focus:ring-blue-300/50"
-            {...form.register('increment')}
-          />
+      <div className="mt-4">
+        <label className="label" htmlFor="increment">
+          <span className="label-text">{t('label_increment')}</span>
         </label>
+        <input
+          id="increment"
+          type="number"
+          className="input input-bordered w-full max-w-xs"
+          {...form.register('increment')}
+        />
 
         {form.formState.errors.increment?.message && (
-          <div className="my-2 text-xs italic text-red-500">{form.formState.errors.increment?.message}</div>
+          <div className="label">
+            <span className="label-text-alt text-error">
+              {form.formState.errors.increment?.message}
+            </span>
+          </div>
         )}
       </div>
 
-      <div className="mt-2">
+      <div className="mt-6">
         <button
-          className="rounded-sm bg-blue-500 px-5 py-1 font-bold text-white hover:bg-blue-600 focus:outline-hidden focus:ring-3 focus:ring-blue-300/50 disabled:pointer-events-none disabled:opacity-50"
+          className="btn btn-primary"
           type="submit"
           disabled={form.formState.isSubmitting}
         >
